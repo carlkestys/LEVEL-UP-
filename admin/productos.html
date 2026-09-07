@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos · Panel administrador</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-brand"><span class="brand-mark" aria-hidden="true"></span>Level-Up Admin</div>
+    <ul class="admin-nav">
+      <li><a href="index.html">📊 Dashboard</a></li>
+      <li class="nav-section-label">Catálogo</li>
+      <li><a href="productos.html" aria-current="page">🎮 Productos</a></li>
+      <li class="nav-section-label" data-admin-only>Personas</li>
+      <li data-admin-only><a href="usuarios.html">👤 Usuarios</a></li>
+    </ul>
+    <div class="admin-sidebar-footer">
+      <p><strong data-admin-user-name></strong></p>
+      <p><span data-admin-user-role class="badge"></span></p>
+      <p style="margin-top:10px;"><a href="#" data-admin-logout>Cerrar sesión</a> · <a href="../index.html">Ir a la tienda</a></p>
+    </div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1>Productos</h1>
+        <p class="breadcrumb">Gestiona el catálogo de la tienda</p>
+      </div>
+      <a href="producto-form.html" class="btn btn-primary" data-admin-only>+ Nuevo producto</a>
+    </div>
+
+    <div class="panel">
+      <table class="data-table">
+        <thead><tr><th>Código</th><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr></thead>
+        <tbody data-products-table></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/validate.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

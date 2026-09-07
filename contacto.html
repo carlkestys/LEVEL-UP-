@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto · Level-Up Gamer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>Level-Up Gamer</a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-guest-only><a href="login.html" class="btn btn-outline btn-sm">Iniciar sesión</a></span>
+      <span class="user-pill" data-user-pill style="display:none;">Hola, <strong data-user-name></strong> · <a href="#" data-logout>Salir</a></span>
+      <a href="carrito.html" class="cart-link" aria-label="Ver carrito">🛒 <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container" style="padding:56px 24px;">
+  <div class="section-head"><div><h1>Hablemos</h1><p>¿Dudas, sugerencias o soporte técnico? Escríbenos.</p></div></div>
+
+  <div class="contact-layout">
+    <div>
+      <div class="contact-info-item">
+        <span class="contact-info-icon" aria-hidden="true">@</span>
+        <div><h3 style="margin-bottom:2px;">Correo</h3><p>hola@levelupgamer.cl</p></div>
+      </div>
+      <div class="contact-info-item">
+        <span class="contact-info-icon" aria-hidden="true">☎</span>
+        <div><h3 style="margin-bottom:2px;">WhatsApp soporte técnico</h3><p>+56 9 1234 5678 — respuesta en horario hábil.</p></div>
+      </div>
+      <div class="contact-info-item">
+        <span class="contact-info-icon" aria-hidden="true">📦</span>
+        <div><h3 style="margin-bottom:2px;">Despachos</h3><p>Realizamos envíos a todo Chile, de lunes a sábado.</p></div>
+      </div>
+      <a href="https://wa.me/56912345678" target="_blank" rel="noopener" class="btn btn-accent" style="margin-top:8px;">Chatear por WhatsApp</a>
+    </div>
+
+    <form class="form-card" data-contact-form novalidate style="max-width:none;">
+      <div class="form-alert" data-form-alert></div>
+      <div class="field" data-field="nombre">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <p class="error-message"></p>
+      </div>
+      <div class="field" data-field="correo">
+        <label for="correo">Correo electrónico (opcional)</label>
+        <input type="email" id="correo" name="correo" placeholder="tu@correo.com">
+        <p class="hint">Si nos dejas tu correo, te responderemos por ahí.</p>
+        <p class="error-message"></p>
+      </div>
+      <div class="field" data-field="comentario">
+        <label for="comentario">¿En qué te ayudamos?</label>
+        <textarea id="comentario" name="comentario" required></textarea>
+        <p class="error-message"></p>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span data-year></span> Level-Up Gamer. Todos los derechos reservados.</span>
+    <span><a href="index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/blogs.js"></script>
+</body>
+</html>

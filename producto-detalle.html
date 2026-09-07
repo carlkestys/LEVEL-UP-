@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalle de producto · Level-Up Gamer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>Level-Up Gamer</a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="productos.html" aria-current="page">Productos</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-guest-only><a href="login.html" class="btn btn-outline btn-sm">Iniciar sesión</a></span>
+      <span class="user-pill" data-user-pill style="display:none;">Hola, <strong data-user-name></strong> · <a href="#" data-logout>Salir</a></span>
+      <a href="carrito.html" class="cart-link" aria-label="Ver carrito">🛒 <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container" style="padding:48px 24px;" data-product-detail>
+  <p class="breadcrumb"><a href="index.html">Home</a> / <a href="productos.html">Productos</a> / <span data-pd-breadcrumb></span></p>
+
+  <div class="product-detail">
+    <div class="product-detail-media">
+      <img data-pd-image src="" alt="">
+    </div>
+    <div class="product-detail-info">
+      <span class="product-cat" data-pd-cat></span>
+      <h1 data-pd-name></h1>
+      <p class="product-detail-price" data-pd-price></p>
+      <p data-pd-desc></p>
+      <p class="stock-badge" data-pd-stock></p>
+
+      <div class="qty-row">
+        <div class="qty-stepper">
+          <button type="button" data-qty-minus aria-label="Restar cantidad">−</button>
+          <input type="text" value="1" data-qty-input readonly aria-label="Cantidad">
+          <button type="button" data-qty-plus aria-label="Sumar cantidad">+</button>
+        </div>
+        <button class="btn btn-primary" data-pd-add>Añadir al carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <section style="margin-top:64px;">
+    <div class="section-head"><h2>También te puede interesar</h2></div>
+    <div class="product-grid" data-pd-related></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span data-year></span> Level-Up Gamer. Todos los derechos reservados.</span>
+    <span><a href="index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog · Level-Up Gamer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>Level-Up Gamer</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blogs.html" aria-current="page">Blogs</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="carrito.html" class="cart-link" aria-label="Ver carrito">🛒 <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container" style="padding:56px 24px;">
+  <p class="breadcrumb"><a href="index.html">Home</a> / <a href="blogs.html">Blogs</a> / Detalle</p>
+  <article class="blog-article" data-blog-article>
+    <p class="blog-article-meta">Level-Up Gamer · Noticias</p>
+    <h1 data-blog-title></h1>
+    <img data-blog-image src="" alt="">
+    <p data-blog-content></p>
+    <a href="blogs.html" class="btn btn-outline btn-sm">← Volver a blogs</a>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span data-year></span> Level-Up Gamer. Todos los derechos reservados.</span>
+    <span><a href="index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/blogs.js"></script>
+</body>
+</html>

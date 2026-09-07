@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usuario · Panel administrador</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-brand"><span class="brand-mark" aria-hidden="true"></span>Level-Up Admin</div>
+    <ul class="admin-nav">
+      <li><a href="index.html">📊 Dashboard</a></li>
+      <li class="nav-section-label">Catálogo</li>
+      <li><a href="productos.html">🎮 Productos</a></li>
+      <li class="nav-section-label" data-admin-only>Personas</li>
+      <li data-admin-only><a href="usuarios.html" aria-current="page">👤 Usuarios</a></li>
+    </ul>
+    <div class="admin-sidebar-footer">
+      <p><strong data-admin-user-name></strong></p>
+      <p><span data-admin-user-role class="badge"></span></p>
+      <p style="margin-top:10px;"><a href="#" data-admin-logout>Cerrar sesión</a> · <a href="../index.html">Ir a la tienda</a></p>
+    </div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1 data-form-title>Nuevo usuario</h1>
+        <p class="breadcrumb"><a href="usuarios.html">Usuarios</a> / Formulario</p>
+      </div>
+    </div>
+
+    <form class="panel" data-user-form novalidate style="max-width:640px;">
+      <div class="field-row">
+        <div class="field" data-field="run">
+          <label for="run">RUN (sin puntos ni guion)</label>
+          <input type="text" id="run" name="run" placeholder="123456785" autocomplete="off">
+          <p class="hint">Entre 7 y 9 caracteres.</p>
+          <p class="error-message"></p>
+        </div>
+        <div class="field" data-field="tipoUsuario">
+          <label for="tipoUsuario">Tipo de usuario</label>
+          <select id="tipoUsuario" name="tipoUsuario">
+            <option value="">-- Seleccione --</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Vendedor">Vendedor</option>
+            <option value="Cliente">Cliente</option>
+          </select>
+          <p class="error-message"></p>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field" data-field="nombre">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="given-name">
+          <p class="error-message"></p>
+        </div>
+        <div class="field" data-field="apellidos">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" autocomplete="family-name">
+          <p class="error-message"></p>
+        </div>
+      </div>
+
+      <div class="field" data-field="correo">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" autocomplete="email">
+        <p class="hint">Solo @duoc.cl, @profesor.duoc.cl o @gmail.com</p>
+        <p class="error-message"></p>
+      </div>
+
+      <div class="field">
+        <label for="fechaNacimiento">Fecha de nacimiento (opcional)</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="region">Región</label>
+          <select id="region" name="region" data-region-select>
+            <option value="">-- Seleccione la región --</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="comuna">Comuna</label>
+          <select id="comuna" name="comuna" data-comuna-select>
+            <option value="">-- Seleccione la comuna --</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field" data-field="direccion">
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" autocomplete="street-address">
+        <p class="error-message"></p>
+      </div>
+
+      <div style="display:flex;gap:12px;margin-top:8px;">
+        <button type="submit" class="btn btn-primary">Guardar usuario</button>
+        <a href="usuarios.html" class="btn btn-outline">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/validate.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

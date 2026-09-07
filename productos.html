@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos · Level-Up Gamer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>Level-Up Gamer</a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="productos.html" aria-current="page">Productos</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-guest-only><a href="login.html" class="btn btn-outline btn-sm">Iniciar sesión</a></span>
+      <span class="user-pill" data-user-pill style="display:none;">Hola, <strong data-user-name></strong> · <a href="#" data-logout>Salir</a></span>
+      <a href="carrito.html" class="cart-link" aria-label="Ver carrito">🛒 <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container" style="padding:48px 24px;">
+  <div class="section-head">
+    <div>
+      <h1>Catálogo de productos</h1>
+      <p data-results-count>Cargando…</p>
+    </div>
+    <input type="search" data-catalog-search placeholder="Buscar producto…" style="background:var(--surface);border:1px solid var(--border);color:var(--text);padding:10px 14px;min-width:220px;">
+  </div>
+
+  <div class="catalog-layout">
+    <aside class="filters">
+      <h3>Categorías</h3>
+      <div class="filter-group" data-category-filters></div>
+      <h3>Ordenar por</h3>
+      <div class="filter-group">
+        <select data-catalog-sort style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:8px;">
+          <option value="relevancia">Relevancia</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre A-Z</option>
+        </select>
+      </div>
+    </aside>
+    <div class="product-grid" data-catalog-grid></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span data-year></span> Level-Up Gamer. Todos los derechos reservados.</span>
+    <span><a href="index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

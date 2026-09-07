@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi carrito · Level-Up Gamer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>Level-Up Gamer</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-guest-only><a href="login.html" class="btn btn-outline btn-sm">Iniciar sesión</a></span>
+      <span class="user-pill" data-user-pill style="display:none;">Hola, <strong data-user-name></strong> · <a href="#" data-logout>Salir</a></span>
+      <a href="carrito.html" class="cart-link" aria-current="page" aria-label="Ver carrito">🛒 <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container" style="padding:56px 24px;">
+  <div class="section-head"><div><h1>Mi carrito de compras</h1></div></div>
+
+  <div class="cart-layout" data-cart-layout>
+    <div>
+      <div data-cart-items></div>
+    </div>
+    <aside class="cart-summary">
+      <div class="cart-summary-row"><span>Subtotal</span><span data-cart-subtotal>$0</span></div>
+      <div class="cart-summary-row" data-cart-discount-row style="display:none;"><span>Descuento Duoc (20%)</span><span data-cart-discount>$0</span></div>
+      <div class="cart-summary-total"><span>Total</span><span data-cart-total>$0</span></div>
+
+      <form data-coupon-form style="display:flex;gap:8px;margin-bottom:16px;">
+        <input type="text" placeholder="Código de descuento" style="flex:1;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:9px 10px;">
+        <button type="submit" class="btn btn-outline btn-sm">Aplicar</button>
+      </form>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:20px;" data-coupon-msg></p>
+
+      <button class="btn btn-accent btn-block">Pagar</button>
+    </aside>
+  </div>
+
+  <div class="cart-empty" data-cart-empty style="display:none;">
+    <h3>Tu carrito está vacío</h3>
+    <p>Todavía no has añadido productos. ¡Explora el catálogo y arma tu setup!</p>
+    <a href="productos.html" class="btn btn-primary">Ver productos</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span data-year></span> Level-Up Gamer. Todos los derechos reservados.</span>
+    <span><a href="index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel administrador · Level-Up Gamer</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-brand"><span class="brand-mark" aria-hidden="true"></span>Level-Up Admin</div>
+    <ul class="admin-nav">
+      <li><a href="index.html" aria-current="page">📊 Dashboard</a></li>
+      <li class="nav-section-label">Catálogo</li>
+      <li><a href="productos.html">🎮 Productos</a></li>
+      <li class="nav-section-label" data-admin-only>Personas</li>
+      <li data-admin-only><a href="usuarios.html">👤 Usuarios</a></li>
+    </ul>
+    <div class="admin-sidebar-footer">
+      <p><strong data-admin-user-name></strong></p>
+      <p><span data-admin-user-role class="badge"></span></p>
+      <p style="margin-top:10px;"><a href="#" data-admin-logout>Cerrar sesión</a> · <a href="../index.html">Ir a la tienda</a></p>
+    </div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="breadcrumb">Resumen general de la tienda</p>
+      </div>
+    </div>
+
+    <div class="stat-grid" data-dashboard-stats></div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Últimos productos cargados</h2>
+        <a href="productos.html" class="btn btn-outline btn-sm">Ver todos</a>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>Código</th><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Stock</th></tr></thead>
+        <tbody data-dashboard-recent></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/validate.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>
